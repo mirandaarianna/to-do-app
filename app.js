@@ -19,10 +19,9 @@ function onReady(){
 
     todos.push(todoObj);
 
-    console.log(todos);
 
-    let newLi = document.createElement('li'); // <li></li>
-    newLi.textContent = title; // <li>Woo!</li>
+    let newLi = document.createElement('li');
+    newLi.textContent = title;
 
     let checkbox = document.createElement('input');
     checkbox.type = "checkbox";
@@ -35,7 +34,6 @@ function onReady(){
       let todoText = this.parentElement.childNodes[0].nodeValue;
       todos.forEach(function(todoItem, index){
         if(todoItem.name == todoText){
-          // delete that item
           todos.splice(index, 1);
         }
         console.log(todos);
